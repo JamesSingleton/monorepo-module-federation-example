@@ -49,13 +49,36 @@ module.exports = {
   plugins: [
     new ModuleFederationPlugin({
       name: 'root',
-      filename: 'remoteEntry.js',
+      filename: 'rootRemoteEntry.js',
       remotes: {
-        users: 'users@http://localhost:3002/remoteEntry.js',
-        root: 'root@http://localhost:3000/remoteEntry.js',
+        users: 'users@http://localhost:3000/usersRemoteEntry.js',
+        root: 'root@http://localhost:3000/rootRemoteEntry.js',
       },
       exposes: {
         './HomePage': './modules/root/src/HomePage',
+      },
+      shared: {
+        ...deps,
+        react: {
+          singleton: true,
+          requiredVersion: deps.react,
+        },
+        'react-dom': {
+          singleton: true,
+          requiredVersion: deps['react-dom'],
+        },
+      },
+    }),
+    new ModuleFederationPlugin({
+      name: 'users',
+      filename: 'usersRemoteEntry.js',
+      remotes: {
+        users: 'users@http://localhost:3000/usersRemoteEntry.js',
+        root: 'root@http://localhost:3000/rootRemoteEntry.js',
+      },
+      exposes: {
+        './routes': './modules/users/src/routes',
+        './UsersPage': './modules/users/src/UsersPage',
       },
       shared: {
         ...deps,

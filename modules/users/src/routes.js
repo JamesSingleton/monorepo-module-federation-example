@@ -5,12 +5,7 @@ const TestPage = React.lazy(() => impost('./TestPage'));
 
 const routes = [
   {
-    path: '/',
-    component: UsersPage,
-    exact: true,
-  },
-  {
-    path: '/test',
+    path: '/users/test',
     component: TestPage,
     exact: true,
   },
