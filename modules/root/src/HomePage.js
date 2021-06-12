@@ -12,7 +12,7 @@ const HomePage = () => (
     <h1>Home Page</h1>
     <h2>Welcome to the future!</h2>
     <p>
-      <em>a page being provided by App 1</em>
+      <em>a page being provided by Root App</em>
     </p>
   </div>
 );

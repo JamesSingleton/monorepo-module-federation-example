@@ -1,7 +1,6 @@
 import React from 'react';
 
-const UsersPage = React.lazy(() => import('./UsersPage'));
-const TestPage = React.lazy(() => impost('./TestPage'));
+const TestPage = React.lazy(() => import('./TestPage'));
 
 const routes = [
   {

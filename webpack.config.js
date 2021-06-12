@@ -20,8 +20,7 @@ module.exports = {
     },
   },
   output: {
-    publicPath: 'auto',
-    chunkFilename: '[id].[contenthash].js',
+    publicPath: '/',
   },
   resolve: {
     extensions: ['.jsx', '.js', '.json', '.mjs'],
@@ -79,6 +78,7 @@ module.exports = {
       exposes: {
         './routes': './modules/users/src/routes',
         './UsersPage': './modules/users/src/UsersPage',
+        './TestPage': './modules/users/src/TestPage',
       },
       shared: {
         ...deps,
@@ -94,6 +94,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: './public/index.html',
+      // excludeChunks: ['root', 'users'],
     }),
   ],
 };

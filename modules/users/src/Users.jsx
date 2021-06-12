@@ -2,9 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import localRoutes from './routes';
-// TODO: add routes from sub modules below
 
-// then include sub module routes here
 const routes = [...localRoutes];
 
 const Users = () => (

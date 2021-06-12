@@ -7,7 +7,7 @@ const style = {
   padding: 12,
 };
 
-const HomePage = () => (
+const UsersPage = () => (
   <div style={style}>
     <h1>Users Page</h1>
     <h2>Welcome to the future!</h2>
@@ -17,4 +17,4 @@ const HomePage = () => (
   </div>
 );
 
-export default HomePage;
+export default UsersPage;

@@ -9,7 +9,7 @@ const style = {
 
 const TestPage = () => (
   <div style={style}>
-    <h1>Users Page</h1>
+    <h1>Test Users Page</h1>
     <h2>Welcome to the future!</h2>
     <p>
       <em>a page being provided by Users App</em>

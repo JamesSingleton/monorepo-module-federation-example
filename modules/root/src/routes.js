@@ -1,7 +1,9 @@
 import React from 'react';
 
 const HomePage = React.lazy(() => import('./HomePage'));
-const UsersPage = React.lazy(() => import('users/HomePage'));
+const UsersPage = React.lazy(() => import('users/UsersPage'));
+
+const Test = () => <div>Hello</div>;
 
 const routes = [
   {
@@ -12,6 +14,7 @@ const routes = [
   {
     path: '/users',
     component: UsersPage,
+    exact: true,
   },
 ];
 
